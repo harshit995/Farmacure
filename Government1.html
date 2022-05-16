@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/bootstrap.min(1).css" rel="stylesheet" />
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="images/favicon.webp" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <title>Government Schemes</title>
+</head>    
+    <style>
+       .timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+}
+
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #eeeeee;
+  left: 50%;
+  margin-left: -1.5px;
+}
+
+.timeline > li {
+  margin-bottom:-30px;
+  position: relative;
+}
+
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline > li:after {
+  clear: both;
+}
+
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline > li:after {
+  clear: both;
+}
+
+.timeline > li > .timeline-panel {
+  width: 44%;
+  float: left;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  margin-bottom: 18px;
+}
+
+.timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid gray;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+  content: " ";
+}
+
+.timeline > li > .timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #fff;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
+
+.timeline > li > .timeline-badge {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  margin-left: -25px;
+  background-color: #999999;
+  z-index: 100;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+
+.timeline-badge.primary {
+  background-color: #2e6da4 !important;
+}
+
+.timeline-badge.success {
+  background-color: #3f903f !important;
+}
+
+.timeline-badge.warning {
+  background-color: #f0ad4e !important;
+}
+
+.timeline-badge.danger {
+  background-color: #d9534f !important;
+}
+
+.timeline-badge.info {
+  background-color: #5bc0de !important;
+}
+
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+}
+
+.timeline-body > p,
+.timeline-body > ul {
+  margin-bottom: 0;
+  
+  
+}
+
+.timeline-body > p + p {
+  margin-top: 5px;
+}
+.timeline-body > p{
+        margin-top: 0;
+    /* margin-bottom: 1rem; */
+    font-size:16px;
+    line-height: 1.2;
+    color:black;
+}
+@media only screen and (max-width: 750px) {
+   
+    .timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #eeeeee;
+  left: 5%;
+  margin-left: -1.5px;
+}
+    .timeline > li > .timeline-badge {
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    left:5%;
+    margin-left: -25px;
+    background-color: #999999;
+    z-index: 100;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+    .timeline > li > .timeline-panel {
+    width: 94%;
+    float: right;
+    border: 1px solid #d4d4d4;
+    border-radius: 2px;
+    padding: 20px;
+    position: relative;
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+    .timeline > li > .timeline-panel:before {
+          position: absolute;
+  top: 0px;
+  right: 0px;
+  display: inline-block;
+  border-top: 0px solid transparent;
+  border-left:0px solid gray;
+  border-right: 0 solid #ccc;
+  border-bottom: 0px solid transparent;
+  content: " ";
+  
+}
+  .timeline > li > .timeline-panel:after {
+  /*position: absolute;*/
+  top: 0px;
+  right: 0px;
+  display: inline-block;
+  border-top: 0px solid transparent;
+  border-left: 0px solid #fff;
+  border-right: 0 solid #fff;
+  border-bottom: 0px solid transparent;
+  content: " ";
+}
+  .timeline > li {
+  margin-bottom:0px;
+  position: relative;
+}
+}
+.nav-item{
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.hi{
+    text-decoration: none;
+    color: white;
+}
+
+.nav {
+    background-color: lightgreen;
+}
+.nav-link {
+    margin-top: 37%;
+    color: rgb(11, 12, 11) !important;
+    font-family: 'Comfortaa', cursive;
+    justify-content: center;
+    text-align: center;
+
+}
+.nav-item :hover{
+    color: rgb(245, 90, 19) !important;
+}
+
+.img-fluid{
+    margin-left: 3%; margin-right: 3%; 
+}
+
+.storage
+{
+    margin-top: 0;
+}   
+
+
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+.footer-section {
+  background: #151414;
+  position: relative;
+}
+.footer-cta {
+  border-bottom: 1px solid #373636;
+}
+.single-cta i {
+  color: #ff5e14;
+  font-size: 30px;
+  float: left;
+  margin-top: 8px;
+}
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+.cta-text h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.cta-text span {
+  color: #757575;
+  font-size: 15px;
+}
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+.footer-pattern img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.footer-logo {
+  margin-bottom: 30px;
+}
+.footer-logo img {
+    max-width: 200px;
+}
+.footer-text p {
+  margin-bottom: 14px;
+  font-size: 14px;
+      color: #7e7e7e;
+  line-height: 28px;
+}
+.footer-social-icon span {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+.footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+}
+.footer-social-icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+}
+.facebook-bg{
+  background: #3B5998;
+}
+.twitter-bg{
+  background: #55ACEE;
+}
+.google-bg{
+  background: #DD4B39;
+}
+.footer-widget-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #ff5e14;
+}
+.footer-widget ul li {
+  display: inline-block;
+  float : left;
+  width: 50%;
+  margin-bottom: 12px;
+}
+.footer-widget ul li a:hover{
+  color: #ff5e14;
+}
+.footer-widget ul li a {
+  color: #878787;
+  text-transform: capitalize;
+}
+.subscribe-form {
+  position: relative;
+  overflow: hidden;
+}
+.subscribe-form input {
+  width: 100%;
+  padding: 14px 28px;
+  background: #2E2E2E;
+  border: 1px solid #2E2E2E;
+  color: #fff;
+}
+.subscribe-form button {
+    position: absolute;
+    right: 0;
+    background: #ff5e14;
+    padding: 13px 20px;
+    border: 1px solid #ff5e14;
+    top: 0;
+}
+.subscribe-form button i {
+  color: #fff;
+  font-size: 22px;
+  transform: rotate(-6deg);
+}
+.copyright-area{
+  background: #202020;
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.copyright-text p a{
+  color: #ff5e14;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: #ff5e14;
+}
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
+}
+
+</style>
+<body>
+
+  <nav>
+    <div>
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a href="/" style= text-Decoration:none >
+                    <div class="nav-link active storage " id="about"  aria-current="page" href="#">
+                        Home
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link storage" href="Prices.html">Prices/Trading</a>
+            </li>
+            <!-- <li class="nav-item">
+                <img src="images/FarmaCure.png" height="60vh" alt="" style="margin-left: 3%; margin-right: 3%"/>
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link storage"  href="weather.html">Weather</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link storage "  href="Government1.html" target="_blank" >Government Schemes </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link storage "  href="#footer">Login/Signup</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <div class="FormDesign" style="width: 100%; padding: 20px">
+        <div class="Wd100 headingStyle">
+            <div class="modules" style="width: 100%; box-shadow: 5px 5px 5px 5px; padding: 20px">
+<div class="container">
+<ul class="timeline">
+<li>
+  <div class="timeline-badge" style="background-color:#cc9e16"><i>1</i></div>
+  <div class="timeline-panel" style="border-color:#cc9e16">
+    <div class="timeline-heading">
+                 </div>
+    <div class="timeline-body">
+        <h4>E-NAM</h4>
+        <p class="visible_text">राष्ट्रीय कृषि बाजार (ईएनएएम) एक अखिल भारतीय इलेक्ट्रॉनिक ट्रेडिंग पोर्टल है जो कृषि वस्तुओं के लिए एक एकीकृत राष्ट्रीय बाजार बनाने के लिए मौजूदा एपीएमसी मंडियों को नेटवर्क करता है।</p>
+        <h5>Toll Free Number</h5>
+        <p> 1800 270 0224 </p>
+        <a href="https://enam.gov.in/web/" class="btn btn-primary learnBtn">More Info</a>
+  </div>
+</li>
+<li class="timeline-inverted">
+  <div class="timeline-badge" style="background-color:#9ACB3A"><i>2</i></div>
+  <div class="timeline-panel" style="border-color:#9ACB3A">
+   
+    <div class="timeline-body" >
+      <h4>National Mission For Sustainable Agriculture (NMSA)</h4>
+      <p class="visible_text">राष्ट्रीय सतत कृषि मिशन (एनएमएसए) कृषि उत्पादकता बढ़ाने के लिए विशेष रूप से एकीकृत खेती, जल उपयोग दक्षता, मृदा स्वास्थ्य प्रबंधन और संसाधन संरक्षण के तालमेल पर ध्यान केंद्रित करते हुए वर्षा सिंचित क्षेत्रों में तैयार किया गया है।</p>
+      <h5>Toll Free Number</h5>
+      <p> 011-23384309 </p>
+      <a href="https://nmsa.dac.gov.in/Default.aspx" class="btn btn-primary learnBtn">More Info</a> 
+  </div>
+</li>
+<li>
+  <div class="timeline-badge" style="background-color:#64CEF1"><i>3</i></div>
+  <div class="timeline-panel" style="border-color:#64CEF1">
+       <div class="timeline-body">
+        <h4>Pradhan Mantri Krishi Sinchai Yojana (PMKSY)</h4>
+        <p>Har Khet ko Pani "Prime Minister Krishi Sinchayee Yojana"</p>
+        <p class="visible_text">भारत सरकार जल संरक्षण और उसके प्रबंधन को उच्च प्राथमिकता देने के लिए प्रतिबद्ध है। इस आशय के लिए प्रधान मंत्री कृषि सिंचाई योजना (पीएमकेएसवाई) को सिंचाई 'हर खेत को पानी' के कवरेज का विस्तार करने और जल उपयोग दक्षता में सुधार लाने की दृष्टि से तैयार किया गया है। स्रोत निर्माण, वितरण, प्रबंधन, क्षेत्र अनुप्रयोग और विस्तार गतिविधियाँ।</p>
+        <h5>Toll Free Number</h5>
+        <p> 011-23383370 </p>
+        <a href="https://pmksy.gov.in/Default.aspx" class="btn btn-primary learnBtn">More Info</a>  
+</li>
+<li class="timeline-inverted">
+  <div class="timeline-badge" style="background-color:#5fdc81"><i>4</i></div>
+  <div class="timeline-panel" style="border-color:#5fdc81">
+       <div class="timeline-body">
+        <h4>Pradhan Mantri Jan Dhan Yojana(PMJDY)</h4>
+        <p class="visible_text">"प्रधान मंत्री जन-धन योजना (पीएमजेडीवाई)" विभिन्न वित्तीय सेवाओं जैसे बुनियादी बचत बैंक खाते की उपलब्धता, आवश्यकता आधारित क्रेडिट तक पहुंच, प्रेषण सुविधा, बीमा और पेंशन से वंचित वर्गों यानी कमजोर वर्गों और निम्न आय समूहों तक पहुंच सुनिश्चित कर रही है। सस्ती कीमत पर यह गहरी पैठ तकनीक के प्रभावी उपयोग से ही संभव है।</p>
+        <h5>Toll Free Number</h5>
+        <p> +911123361571 </p>
+        <a href="https://pmjdy.gov.in/" class="btn btn-primary learnBtn">More Info</a> 
+</li>
+<li>
+  <div class="timeline-badge" style="background-color:#cc9e16"><i>5</i></div>
+  <div class="timeline-panel" style="border-color:#cc9e16">
+     <div class="timeline-body">
+      <h4>Paramparagat Krishi Vikas Yojana (PKVY)</h4>
+        <p class="visible_text">प्राकृतिक संसाधन आधारित एकीकृत और जलवायु लचीला टिकाऊ कृषि प्रणालियों को बढ़ावा देना जो मिट्टी की उर्वरता, प्राकृतिक संसाधन संरक्षण, खेत पर पोषक तत्वों के पुनर्चक्रण और बाहरी आदानों पर किसानों की निर्भरता को कम करने और बढ़ाने को सुनिश्चित करते हैं।
+          टिकाऊ एकीकृत जैविक खेती प्रणाली के माध्यम से किसानों को कृषि की लागत कम करने के लिए जिससे प्रति यूनिट भूमि किसान की शुद्ध आय में वृद्धि हो।</p>
+        <h5>Toll Free Number</h5>
+        <p> +91 120-2764906 </p>
+        <a href="https://pgsindia-ncof.gov.in/PKVY/Introduction.aspx" class="btn btn-primary learnBtn">More Info</a> 
+  </div>
+</li>
+<li class="timeline-inverted">
+  <div class="timeline-badge" style="background-color:#9ACB3A"><i>6</i></div>
+  <div class="timeline-panel" style="border-color:#9ACB3A">
+     <div class="timeline-body">
+      <h4>Pradhan Mantri Fasal Bima Yojana (PMFBY)</h4>
+      <p class="visible_text">प्रधान मंत्री फसल बीमा योजना (पीएमएफबीवाई) सरकार द्वारा प्रायोजित फसल बीमा योजना है जो एक ही मंच पर कई हितधारकों को एकीकृत करती है। आपदाएं, कीट और रोग।</p>
+      <h5>Toll Free Number</h5>
+      <p> 1800 2 660 700  </p>
+      <a href="https://pmfby.gov.in/" class="btn btn-primary learnBtn">More Info</a> 
+           </div>
+  </div>
+</li>
+  <li>
+      <div class="timeline-badge" style="background-color:#64CEF1"><i>7</i></div>
+  <div class="timeline-panel" style="border-color:#64CEF1">
+     <div class="timeline-body">
+      <h4>
+        Revised Kisan Credit Card Scheme(KCCS)</h4>
+      <p class="visible_text">इस योजना का उद्देश्य किसानों को उनकी खेती के लिए एकल खिड़की के तहत व्यापक ऋण आवश्यकताओं के लिए पर्याप्त और समय पर क्रेडिट प्रदान करना है। फसलों की खेती के लिए अल्पकालिक ऋण आवश्यकताओं को पूरा करना। कृषि और संबद्ध गतिविधियों जैसे पंप सेट, स्प्रेयर, के लिए निवेश ऋण आवश्यकता। डेयरी पशु, फूलों की खेती, बागवानी आदि
+        जानवरों, पक्षियों, मछलियों, झींगा, अन्य जलीय जीवों के पालन-पोषण, मछली पकड़ने के लिए अल्पकालिक ऋण आवश्यकताएं।
+        </p>
+      <h5>Toll Free Number</h5>
+      <p> 1800155261 </p>
+      <a href="" class="btn btn-primary learnBtn">More Info</a> 
+  </div>
+</li>
+<li class="timeline-inverted">
+    <div class="timeline-badge" style="background-color:#9ACB3A"><i>8</i></div>
+    <div class="timeline-panel" style="border-color:#9ACB3A">
+      <div class="timeline-body">
+          <h4>National Scheme on Welfare of Fishermen</h4>
+      
+           <p>केंद्र प्रायोजित 'मछुआरों के कल्याण की राष्ट्रीय योजना' में मछुआरों को घर के निर्माण, मनोरंजन के लिए सामुदायिक हॉल और सामान्य कार्य स्थल और पीने के पानी के लिए नलकूपों की स्थापना और बचत सह राहत के माध्यम से कम अवधि के दौरान सहायता प्रदान करने के लिए वित्तीय सहायता प्रदान करने की परिकल्पना की गई है।</p>
+           <h5>Toll Free Number</h5>
+           <p> 1800-425-1660 </p>
+           <a href="https://dahd.nic.in/related-links/centrally-sponsored-national-scheme-welfare-fishermen#:~:text=The%20Centrally%20Sponsored%20'National%20Scheme,period%20through%20saving%20cum%20relief" class="btn btn-primary learnBtn">More Info</a> 
+        </div>
+    </div>
+</li>
+  <li>
+      <div class="timeline-badge" style="background-color:#64CEF1"><i>9</i></div>
+  <div class="timeline-panel" style="border-color:#64CEF1">
+     <div class="timeline-body">
+      <h4>livestock insurance scheme</h4>
+      
+      <p>इस योजना के तहत संकर नस्ल और अधिक उपज देने वाले मवेशियों और भैंसों का उनके वर्तमान बाजार मूल्य के अधिकतम मूल्य पर बीमा किया जा रहा है। बीमा के प्रीमियम पर 50% की सब्सिडी दी जाती है। सब्सिडी का पूरा खर्च केंद्र सरकार वहन कर रही है। अधिकतम तीन वर्ष की पॉलिसी पर प्रति लाभार्थी अधिकतम 2 पशुओं को सब्सिडी का लाभ दिया जा रहा है
+      </p>
+      <h5>Toll Free Number</h5>
+      <p> 1800 180 1551</p>
+      <a href=https://dahd.nic.in/related-links/livestock-insurance class="btn btn-primary learnBtn">More Info</a> 
+     </div>
+  </div>
+</li>
+
+</ul>
+</div>
+</div>
+            </div>
+    </div>
+    </div>
+
+    <footer class="footer-section">
+      <div class="container">
+          <div class="footer-content pt-5 pb-5">
+              <div class="row">
+                  <div class="col-xl-4 col-lg-4 mb-50">
+                      <div class="footer-widget">
+                          <div class="footer-logo">
+                              <div class="footer-widget-heading">
+                                  <h3><a class="hi" href="index.html">Farmacure</a></h3>
+
+                              </div>
+                              
+                          </div>
+                          <div class="footer-text">
+                              <p>If agriculture goes wrong, nothing else will have a chance to go right in the country.</p>
+                          </div>
+                          <div class="footer-social-icon">
+                              <span>Follow us</span>
+                              <a href="#"><i class="bi bi-facebook "></i></a>
+                              <a href="#"><i class="bi bi-twitter "></i></a>
+                              <a href="#"><i class="bi bi-instagram"></i></a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                      <div class="footer-widget">
+                          <div class="footer-widget-heading">
+                              <h3>Useful Links</h3>
+                          </div>
+                          <ul>
+                              <li><a href="#">Home</a></li>
+                              <li><a href="#">about</a></li>
+                              <li><a href="#">services</a></li>
+                              <li><a href="#">portfolio</a></li>
+                              <li><a href="#">Contact</a></li>
+                              <li><a href="#">About us</a></li>
+                              <li><a href="#">Our Services</a></li>
+                              <li><a href="#">Expert Team</a></li>
+                              <li><a href="#">Contact us</a></li>
+                              <li><a href="#">Latest News</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                      <div class="footer-widget">
+                          <div class="footer-widget-heading">
+                              <h3>Toll free Number For kisaan</h3>
+                          </div>
+                          <div class="footer-text mb-25">
+                              <p>1800-180-1551</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="copyright-area">
+          <div class="container">
+              <div class="row">
+                  <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                      <div class="copyright-text">
+                          <p>Copyright &copy; 2021, All Right Reserved <a href="/">Farmacure</a></p>
+                      </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                      <div class="footer-menu">
+                          <ul>
+                              <li><a href="#">Home</a></li>
+                              <li><a href="#">Terms</a></li>
+                              <li><a href="#">Privacy</a></li>
+                              <li><a href="#">Policy</a></li>
+                              <li><a href="#">Contact</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+</body>
+</html>

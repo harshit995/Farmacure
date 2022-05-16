@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"></head> -->
+    <link rel="icon" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+<link rel="shortcut icon" href="images/favicon.webp" type="image/x-icon">
+
+<style>
+    body{
+    margin: 0;
+    padding: 0;
+    background: url(images/43f23554-9e4b-448c-8997-149996354a0b.jpg) no-repeat center center/cover;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin: 20px 64px;
+    padding: 37px 111px;
+    position: relative;
+    border: 2px dashed black;
+    width: 80vw;
+    text-align: center;
+    
+}
+
+#city{
+    font-size: 2rem;
+    font-weight: 800;
+}
+#temperature{
+    font-size: 2rem;
+    font-weight: 800;
+}
+#humidity{
+    font-size: 2rem;
+    font-weight: 800;
+}
+#wind{
+    font-size: 2rem;
+    font-weight: 800;
+}
+#prescription{
+    font-size: 2rem;
+    font-weight: 800;
+}
+#prescription1{
+    font-size: 2rem;
+    font-weight: 800;
+}
+.nav-item{
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav {
+    background-color: lightgreen;
+}
+.nav-link {
+    margin-top: 37%;
+    color: rgb(11, 12, 11) !important;
+    font-family: 'Comfortaa', cursive;
+    justify-content: center;
+    text-align: center;
+
+}
+.nav-item :hover{
+    color: rgb(245, 90, 19) !important;
+}
+
+.img-fluid{
+    margin-left: 3%; margin-right: 3%; 
+}
+
+.storage
+{
+    margin-top: 0;
+}   
+
+
+</style>
+  
+<body>  
+
+    <nav>
+        <div>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a href="/" style= text-Decoration:none >
+                        <div class="nav-link active storage " id="about"  aria-current="page" href="#">
+                            Home
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link storage" href="Prices.html">Prices/Trading</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <img src="images/FarmaCure.png" height="60vh" alt="" style="margin-left: 3%; margin-right: 3%"/>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link storage"  href="weather.html">Weather</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link storage "  href="Government1.html" target="_blank" >Government Schemes </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link storage "  href="#footer">Login/Signup</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="weather">
+            <h1 id="city" class="weatherInfo"></h1>
+            <p id="temperature" class="weatherInfo"></p>
+            <p id="humidity" class="weatherInfo"></p>
+            <p id="wind" class="weatherInfo"></p>
+            <p id="prescription" class="weatherInfo"></p>
+            <p id="prescription1" class="weatherInfo"></p>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
