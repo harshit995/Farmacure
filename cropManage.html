@@ -4,9 +4,387 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="images/favicon.webp" type="image/x-icon">
     <title>CropManagement</title>
+
+    <style>
+        body{
+            background-color: lightblue;
+        }
+        .nav-item{
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav {
+    background-color: lightgreen;
+}
+.nav-link {
+    margin-top: 37%;
+    color: rgb(11, 12, 11) !important;
+    font-family: 'Comfortaa', cursive;
+    justify-content: center;
+    text-align: center;
+
+}
+.nav-item :hover{
+    color: rgb(245, 90, 19) !important;
+}
+
+.img-fluid{
+    margin-left: 3%; margin-right: 3%; 
+}
+.storage
+{
+    margin-top: 0;
+}   
+.hii{
+    text-align: center;
+}
+.seed{
+    border: 2px solid black;
+}
+
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+.footer-section {
+  background: #151414;
+  position: relative;
+}
+.footer-cta {
+  border-bottom: 1px solid #373636;
+}
+.single-cta i {
+  color: #ff5e14;
+  font-size: 30px;
+  float: left;
+  margin-top: 8px;
+}
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+.cta-text h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.cta-text span {
+  color: #757575;
+  font-size: 15px;
+}
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+.footer-pattern img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.footer-logo {
+  margin-bottom: 30px;
+}
+.footer-logo img {
+    max-width: 200px;
+}
+.footer-text p {
+  margin-bottom: 14px;
+  font-size: 14px;
+      color: #7e7e7e;
+  line-height: 28px;
+}
+.footer-social-icon span {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+.footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+}
+.footer-social-icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+}
+.facebook-bg{
+  background: #3B5998;
+}
+.twitter-bg{
+  background: #55ACEE;
+}
+.google-bg{
+  background: #DD4B39;
+}
+.footer-widget-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #ff5e14;
+}
+.footer-widget ul li {
+  display: inline-block;
+  float : left;
+  width: 50%;
+  margin-bottom: 12px;
+}
+.footer-widget ul li a:hover{
+  color: #ff5e14;
+}
+.footer-widget ul li a {
+  color: #878787;
+  text-transform: capitalize;
+}
+.subscribe-form {
+  position: relative;
+  overflow: hidden;
+}
+.subscribe-form input {
+  width: 100%;
+  padding: 14px 28px;
+  background: #2E2E2E;
+  border: 1px solid #2E2E2E;
+  color: #fff;
+}
+.subscribe-form button {
+    position: absolute;
+    right: 0;
+    background: #ff5e14;
+    padding: 13px 20px;
+    border: 1px solid #ff5e14;
+    top: 0;
+}
+.subscribe-form button i {
+  color: #fff;
+  font-size: 22px;
+  transform: rotate(-6deg);
+}
+.copyright-area{
+  background: #202020;
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.copyright-text p a{
+  color: #ff5e14;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: #ff5e14;
+}
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
+}
+.hi{
+    text-decoration: none;
+    color: white;
+}
+    </style>
 </head>
 <body>
     
+
+    <nav>
+        <div>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a href="index.html" style= text-Decoration:none >
+                        <div class="nav-link active storage" id="about"  aria-current="page" >
+                            Home
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link storage" href="Prices.html">Prices/Trading</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <img src="images/FarmaCure.png" height="60vh" alt="" style="margin-left: 3%; margin-right: 3%"/>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link storage"  href="weather.html">Weather</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link storage "  href="Government1.html" target="_blank" >Government Schemes </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link storage "  href="cropManage.html" target="_blank" >Crop Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link storage "  href="production.html" target="_blank" >Production</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link storage "  href="#footer">Login/Signup</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <h1 style="text-align: center;">Basics of crop Management</h1>
+    
+    <div class="man">
+        <div class="para">
+            <h3 class="hii" >Seedbed Preparation</h3>
+            <p class="seed">फसल वृद्धि और विकास में सुधार के लिए सीड बेड की तैयारी पहला कदम है। आदर्श बीज क्यारी समान रूप से दृढ़ होती है, सतह के पास पर्याप्त मिट्टी की नमी होती है, और प्रतिस्पर्धी खरपतवारों से मुक्त होती है। "अच्छे बीज से मिट्टी के संपर्क की आवश्यकता" आमतौर पर सीडिंग दस्तावेजों पर देखा जाने वाला एक वाक्यांश है। बीज का मिट्टी के साथ अच्छा संपर्क होने पर बीज का अंकुरण बेहतर होता है। हालाँकि, बहुत दृढ़ एक बीज बिस्तर जमीन में बीज को प्राप्त करना चुनौतीपूर्ण बनाता है।
+
+                सीड बेड तैयार करने की दो प्राथमिक विधियाँ पारंपरिक जुताई और कम या बिना जुताई हैं। पारंपरिक पारंपरिक जुताई में हल की पूरी गहराई को बदलना और बड़ी मात्रा में मिट्टी के कार्बनिक पदार्थों को ऑक्सीकरण के लिए उजागर करना शामिल है। हालांकि, कम या बिना जुताई प्रथाओं से मृदा कार्बन का संचय हो सकता है, जो अंततः मिट्टी के स्वास्थ्य को लाभ पहुंचा सकता है और लंबे समय में फसल की पैदावार में सुधार कर सकता है।</p>
+        </div>
+        <div class="para">
+            <h3 class="hii" >Planting</h3>
+            <p class="seed">बीज क्यारी तैयार हो जाने के बाद बीज को 1.5 से 2.0 इंच गहराई में बोना चाहिए ताकि अच्छे बीज अंकुरण के लिए उचित नमी की उपलब्धता सुनिश्चित हो सके। बीज को अंकुरित होने के लिए इष्टतम नमी और तापमान की स्थिति की आवश्यकता होती है, इसलिए हमेशा उचित बीज अंकुरण के लिए मिट्टी के तापमान और नमी की आवश्यकताओं पर पूरा ध्यान दें।</p>
+        </div>
+        <div class="para">
+            <h3 class="hii" >Fertilization</h3>
+            <p class="seed">उर्वरक फसल प्रबंधन का एक महत्वपूर्ण घटक हो सकता है। किसी भी फसल में खाद डालने से पहले मिट्टी में उपलब्ध पोषक तत्वों की जांच कर लेनी चाहिए। मिट्टी और/या पौधों के विश्लेषण से निर्धारित उपयुक्त उर्वरकों को जोड़ने से रोपित फसल की पोषण संबंधी आवश्यकता को सुनिश्चित किया जा सकता है।
+
+                उर्वरक की मात्रा, प्रकार (थोक-मिश्रित या मिश्रित), रूप (गैस, शुष्क ठोस या तरल), समय, और आवेदन की विधि (प्रसारण, गहरी नियुक्ति, ड्रिबल, पर्ण, स्टार्टर, पोस्ट-इमर्जेंट, पंक्ति, पट्टी और परिवर्तनीय दर), सभी विभिन्न कारकों द्वारा निर्धारित होते हैं, जैसे कि फसल और उर्वरक प्रकार, मिट्टी और मौसम की स्थिति। पिछली फसल (फलियां) और पिछली खाद के अनुप्रयोग भी फसल पोषक तत्वों की जरूरतों को प्रभावित करते हैं। इसलिए, फसल की जरूरतों को निर्धारित करने में पिछले खाद अनुप्रयोगों को हमेशा ध्यान में रखा जाना चाहिए।</p>
+        </div>
+        <div class="para">
+            <h3 class="hii" >Pest Management
+            </h3>
+            <p class="seed">कीट प्रबंधन फसल प्रबंधन का एक अन्य महत्वपूर्ण पहलू है। अधिकांश फसलों में कीटनाशकों को नियंत्रित करने के लिए कीटनाशक शक्तिशाली उपकरण हो सकते हैं, मुख्य रूप से यदि विशिष्ट कीट प्रजातियों के आधार पर सही ढंग से उपयोग किया जाता है। इसके अतिरिक्त, एकीकृत कीट प्रबंधन (आईपीएम) प्रथाएं उत्पादकों को एक किफायती विकल्प प्रदान कर सकती हैं जो मानव और प्राकृतिक संसाधनों के लिए सुरक्षित और अक्सर अधिक फायदेमंद होता है। इस आईपीएम दृष्टिकोण में यांत्रिक, जैविक और रासायनिक (लेबल कीटनाशक) कीट नियंत्रण विधियों को शामिल किया गया है।
+
+                भूमि के एक ही टुकड़े पर एक ही सक्रिय संघटक का बार-बार उपयोग करने से, उत्पाद के नाम की परवाह किए बिना, कीटों में समय के साथ प्रतिरोध विकसित हो जाएगा। यह समय के साथ रसायन को कम उपयोगी या बेकार भी बनाता है। इस प्रकार, कीटों के बीच प्रतिरोध के विकास से बचने के लिए, एक ही कीटनाशकों का उपयोग सीमित करें और विभिन्न रासायनिक वर्गों के उत्पादों का चयन करें, या कार्रवाई के तरीके अलग-अलग हों। कीटनाशकों के लिए कीट प्रतिरोध के विकास से बचने के लिए कुछ सांस्कृतिक प्रथाओं (फसल रोटेशन, साथी फसलों) और जैविक नियंत्रण (शिकारी, परजीवी) को शामिल करना सबसे अच्छा है। आम तौर पर, विविध फसल प्रणालियां मिट्टी की गुणवत्ता और फसल की पैदावार में सुधार करते हुए व्यापक फसल विफलताओं और कीट दबाव की संभावना को कम करती हैं। किसी भी विशिष्ट आवश्यकता, जैसे पोषक तत्वों की कमी, कीट प्रकोप आदि के लिए फसल की नियमित रूप से निगरानी भी बढ़ते मौसम के दौरान की जानी चाहिए।</p>
+        </div>
+        <div class="para">
+            <h3 class="hii" >Irrigation
+            </h3>
+            <p class="seed">फसल उत्पादन के लिए सिंचाई एक और महत्वपूर्ण कारक है जो अंतिम फसल की पैदावार और गुणवत्ता को प्रभावित करता है, खासकर हमारे शुष्क क्षेत्र में। अति-सिंचाई के परिणामस्वरूप भूजल में पोषक तत्वों का रिसाव होता है और/या सतही अपवाह के माध्यम से पानी और मिट्टी का कटाव बर्बाद होता है। इन नुकसानों से उर्वरकों, विशेष रूप से नाइट्रोजन की दक्षता कम हो जाएगी।
+
+                किसी भी फसल को बोने से पहले, पानी की जरूरतों और उस फसल के महत्वपूर्ण विकास चरणों के बारे में जानकारी प्राप्त करें, और फिर सिंचाई को निर्धारित करने के लिए सिंचाई प्रणाली की दक्षता निर्धारित करें। यदि संभव हो, तो सिंचाई प्रणालियों का उपयोग करें जो बेहतर जल उपयोग क्षमता प्रदान करती हैं, जैसे कि सूक्ष्म छिड़काव, कम ऊंचाई वाले छिड़काव और ड्रिप (85-95% कुशल), या कम और उच्च दबाव केंद्र धुरी (75-90% कुशल)। सामान्य तौर पर, बाढ़ सिंचाई प्रणाली अन्य तरीकों की तुलना में कम कुशल (20-50%) है। इसके अतिरिक्त, यदि संभव हो तो, वाष्पीकरण के माध्यम से पानी के नुकसान से बचने के लिए सुबह या देर शाम को अपनी सिंचाई का समय निर्धारित करें।</p>
+        </div>
+        <div class="para">
+            <h3 class="hii" >Harvesting
+            </h3>
+            <p class="seed">अंत में, फसलों की उपज और गुणवत्ता फसल प्रबंधन रणनीति पर निर्भर करती है। बहुत अधिक गीली या बर्फीली परिस्थितियाँ फसल की कटाई में देरी कर सकती हैं। उच्च नमी सामग्री फसल/बीज के यांत्रिक कटाई (विंडोरिंग या स्वाथिंग, प्रत्यक्ष संयोजन) में देरी करती है। अधिकांश अनाज/बीज फसलों की कटाई तब की जानी चाहिए जब वे फसल की परिपक्वता अवस्था में पहुंच गए हों। यह समय चकनाचूर और रहने से उपज हानि को कम करता है। इसलिए, फसल का सही समय न मिलने से अक्सर उपज का गंभीर नुकसान होता है।
+
+                चारे की कटाई का परिपक्वता चरण चारा गुणवत्ता और अंतिम उपयोग को प्रभावित करने वाला एक महत्वपूर्ण कारक है। यदि अधिकतम पैदावार (उदाहरण के लिए, अल्फाल्फा) के लिए चारे की कटाई में देरी होती है, तो चारा की गुणवत्ता खराब हो जाएगी या आवश्यक इष्टतम गुणवत्ता से नीचे गिर जाएगी। अल्फाल्फा चारे की अधिकतम उपज पूर्ण पुष्पन अवस्था में प्राप्त की जाती है; हालांकि, फूल आने से पहले चारा की गुणवत्ता उच्चतम होती है।</p>
+        </div>
+        <div class="para">
+            <h3 class="hii" >Post-Harvest Storage
+            </h3>
+            <p class="seed">कटाई के बाद भंडारण की स्थिति फसल के चारा और अनाज की गुणवत्ता को भी प्रभावित करती है। कटाई की गई फसल को गुणवत्ता को अधिकतम करने, कीटों के प्रकोप को कम करने और भंडारण के दौरान खराब होने से बचाने के लिए प्रत्येक फसल के लिए उचित अनुशंसित नमी सामग्री पर संग्रहित किया जाना चाहिए। उदाहरण के लिए, 14.5 प्रतिशत नमी सामग्री पर भंडारित अनाज गुणवत्ता हानि, मोल्ड वृद्धि और कीट संक्रमण के लिए अतिसंवेदनशील होते हैं। बेहतर गुणवत्ता के लिए नमी की मात्रा 18-20% होने पर अल्फाल्फा के चारे को गंजा कर देना चाहिए।</p>
+        </div>
+    </div>
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <div class="footer-widget-heading">
+                                    <h3><a class="hi" href="index.html">Farmacure</a></h3>
+
+                                </div>
+                                
+                            </div>
+                            <div class="footer-text">
+                                <p>If agriculture goes wrong, nothing else will have a chance to go right in the country.</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="#"><i class="bi bi-facebook "></i></a>
+                                <a href="#"><i class="bi bi-twitter "></i></a>
+                                <a href="#"><i class="bi bi-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">about</a></li>
+                                <li><a href="#">services</a></li>
+                                <li><a href="#">portfolio</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Our Services</a></li>
+                                <li><a href="#">Expert Team</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">Latest News</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Toll free Number For kisaan</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>1800-180-1551</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2021, All Right Reserved <a href="/">Farmacure</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Policy</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
